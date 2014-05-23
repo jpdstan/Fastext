@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>fasTEXT</title>
+		<meta name="description" content="Utilize your brain and read at an incredibly fast pace" />
+		<meta http-equiv="author" content="Stanley Kwong" />
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<h1>fasTEXT</h1>
+		<h2>Just copy your text into the box and press Go!</h2>
+		<div id="display">hello</div>
+		<form id="text" action="" method="post">
+			<textarea id="userInput" name="input" placeholder="Place your text in here"></textarea>
+			<br />
+			<input name="start" type="button" value="Go!" onclick="activate()" />
+			<input name="pause" type="button" value="Pause" onclick="clearInterval(timerID_)" />
+			<input name="reset" type="button" value="Reset" onclick="reset()"/>
+		</form>
+		<div id="footer">Created by <a href="http://www.stanley-kwong.appspot.com">Stanley Kwong</a></div>
+	</body>
+</html>
+
+
