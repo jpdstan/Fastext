@@ -2,31 +2,58 @@
 
 var timerID_;
 var i = 0;
-var blank_ = "gdsafds";
+var blank_ = "";
+var resetCounter_ = false;
 
 function activate() {
-	timerID_ = window.setInterval(speedRead, 500);
+	timerID_ = setInterval(speedRead, 200);
 }
 
 function speedRead() {
+	if (resetCounter_) {
+		i = 0;
+		resetCounter_ = false;
+	}
 	var text = document.getElementById('userInput').value;
 	var newText = text.split(" ");
 	if (i == newText.length || newText[i] == undefined)
 		pause();
-	else {
+	else if ($( "#text" ).valid()) {
+		// var newStr = newText[i].split('');
+		// for (var i = 0; i < newStr.length; i++) {
+		// 	if (i == (newStr.length / 2))
+		// 		document.getElementById('display').innerHTML += mid; 
+		// 	else
+		// 		document.getElementById('display').innerHTML += newStr[i];
+		// }
 		document.getElementById('display').innerHTML = newText[i];
 		i++;
 	}
 }
 
+//Pauses whatever text is displayed. 
 function pause() {
-	window.clearInterval(timerID_);
+	clearInterval(timerID_);
 }
 
 //Clears the textbox and resets the timer. 
 function reset() {
-	window.clearInterval(timerID_);
-	i = 0;
-	document.getElementById('display').value = blank_;
-	document.getElementById('userInput').value = blank_;
+	document.getElementById('display').innerHTML = "hello";
+	document.getElementById('text').innerHTML = "";
+	clearInterval(timerID_);
+	resetCounter_ = true;
+	pause();
 }
+
+$(document).ready(function() {
+	$( "#text" ).validate({
+		rules: {
+			input: {
+				required: true
+			},
+		}
+	});
+	jQuery.extend(jQuery.validator.messages, {
+		required: ""
+	});
+});

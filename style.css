@@ -28,6 +28,7 @@ h2 {
 #display {
 	height: 20%;
 	width: 30%;
+	min-width: 500px;
 	padding: 50px 0px;
 	margin-bottom: 15px;
 	border-style: solid;
@@ -35,12 +36,36 @@ h2 {
 	border-radius: 8px;
 	font-size: 18px;
 	cursor: default;
+	z-index: 1;
 }
 
 #userInput {
 	height: 120px;
 	width: 30%;
+	min-width: 500px;
 	margin-right: -3px;
+}
+
+textarea.error {
+	-webkit-animation-name: shake;
+	-webkit-animation-duration:     0.8s;
+	-webkit-animation-iteration-count: initial;
+	-webkit-animation-timing-function: linear;
+	-webkit-transform-origin:    50% 100%;
+}
+
+@-webkit-keyframes shake {
+	0% { -webkit-transform:      translate(5px, 0px) }
+	10% { -webkit-transform:     translate(-4px, 0px) }
+	20% { -webkit-transform:     translate(-6px, 0px) }
+	30% { -webkit-transform:     translate(3px, 0px) }
+	40% { -webkit-transform:     translate(4px, 0px) }
+	50% { -webkit-transform:     translate(-4px, 0px) }
+	60% { -webkit-transform:     translate(-6px, 0px) }
+	70% { -webkit-transform:     translate(3px, 0px) }
+	80% { -webkit-transform:     translate(-3px, 0px) }
+	90% { -webkit-transform:     translate(4px, 0px) }
+	100% { -webkit-transform:    translate(2px, 0px) }
 }
 
 input[type="button"] {
@@ -48,6 +73,7 @@ input[type="button"] {
 	margin-top: 15px;
 	padding: 12px;
 	width: 10%;
+	min-width: 166px;
 	border: none;
 	background: #e75854;
 	color: #f9f6e5;
