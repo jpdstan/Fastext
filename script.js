@@ -45,6 +45,7 @@ function reset() {
 	pause();
 }
 
+//JQuery validation for text field, making sure something exists. 
 $(document).ready(function() {
 	$( "#text" ).validate({
 		rules: {
