@@ -4,9 +4,10 @@ var timerID_;
 var i = 0;
 var blank_ = "";
 var resetCounter_ = false;
+var speed_ = 300;
 
 function activate() {
-	timerID_ = setInterval(speedRead, 200);
+	timerID_ = setInterval(speedRead, speed_);
 }
 
 function speedRead() {
@@ -40,9 +41,15 @@ function pause() {
 function reset() {
 	document.getElementById('display').innerHTML = "hello";
 	document.getElementById('text').innerHTML = "";
-	clearInterval(timerID_);
 	resetCounter_ = true;
 	pause();
+}
+
+function adjustSpeed(newValue) {
+	speed_ = 60000 / newValue; // 60,000 milliseconds in a minute. Divide this
+							   // by the number of words per minute to get the
+							   // amount of time each word should be displayed. 
+	document.getElementById('speedBar').innerHTML = newValue + " wpm";
 }
 
 //JQuery validation for text field, making sure something exists. 

@@ -18,7 +18,7 @@ h2 {
 	opacity: .5;
 }
 
-#display, form {
+#display, form, #speedBar {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
@@ -88,6 +88,12 @@ input[type="button"] {
 
 input[type="button"]:hover {
 	background-color: rgb(200, 100, 80);
+}
+
+input[type="range"] {
+	width: 250px;
+	margin: 15px 15px 0px 545px;
+
 }
 
 #footer {
