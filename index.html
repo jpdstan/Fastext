@@ -23,9 +23,11 @@
 			<input name="stop" type="button" value="Pause" onclick="pause()" />
 			<input name="restart" type="button" value="Reset" onclick="reset()" />
 		</form>
-		<input type="range" min="200" max="700" value="300" step="5" onchange="adjustSpeed(this.value)"/>
+		<div id="speedAdjust">
+			<input type="range" min="200" max="700" value="300" step="5" onchange="adjustSpeed(this.value)"/>
+		</div>
 		<div id="speedBar">300 wpm</div>
-		<div id="footer">Created by <a href="http://www.stanley-kwong.appspot.com">Stanley Kwong</a></div>
+		<div id="footer">Created by <a href="http://stankwong.me">Stanley Kwong</a></div>
 	</body>
 </html>
 

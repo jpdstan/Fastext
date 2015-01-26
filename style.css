@@ -90,10 +90,13 @@ input[type="button"]:hover {
 	background-color: rgb(200, 100, 80);
 }
 
+#speedAdjust {
+	text-align: center;
+	padding: 15px 0px;
+}
+
 input[type="range"] {
 	width: 250px;
-	margin: 15px 15px 0px 545px;
-
 }
 
 #footer {

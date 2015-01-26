@@ -39,10 +39,10 @@ function pause() {
 
 //Clears the textbox and resets the timer. 
 function reset() {
+	pause();
 	document.getElementById('display').innerHTML = "hello";
 	document.getElementById('text').innerHTML = "";
 	resetCounter_ = true;
-	pause();
 }
 
 function adjustSpeed(newValue) {
